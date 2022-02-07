@@ -1,12 +1,11 @@
-# How to build and run the developer portal.
+# Developer Portal Setup
 
 The developer portal is built using Jekyll and runs on GitHub Pages.  More information can be found at: <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll">Testing your GitHub Pages site locally with Jekyll</a>
 
 ## Prerequisites:
-  1. Have Ruby installed.  This is installed by default on MacOS. Instructions for all platforms are here: <a href="https://www.ruby-lang.org/en/documentation/installation/">Installing Ruby</a>
-  2. Have Bundler installed.  Instructions are available here: <a href="https://bundler.io">Installing Bundler</a>
-  3. Have Jekyll installed.  Installation instructions are available here: <a href="https://jekyllrb.com">Installing Jekyll</a>. Please note that Windows isn't officially supported by Jekyll.
-  
+1. Ensure you have rbenv (a tool for managing separate copies of Ruby for different projects) installed and setup (install with Homebrew: `brew install rbenv`). Be sure to set up your PATH and environment afterwards as per instructions given by `rbenv init`.
+2. In the directory of your clone of this repo: `rbenv install`. That will ensure you have the correct version of Ruby available for this repo.
+3. Ensure Bundler is installed for this particular version of ruby: `gem install bundler`.
   
 ## Instructions:
   1. Navigate to the base of this repo
