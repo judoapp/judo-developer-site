@@ -1,4 +1,10 @@
 <nav class="left-nav left-sidebar nav-appearance">
+  {% if page.platform == "iOS" %}
+          <p class="dark-text boldest nav-title">iOS SDK</p>
+          {% endif %}
+          {% if page.platform == "Android" %}
+        <p class="dark-text boldest nav-title">Android SDK</p>
+        {% endif %}
   <div class="nav-container">
     {% case page.platform %}
       {% when "iOS" %}
@@ -14,6 +20,6 @@
       <li><a href="{{ currPage.url | relative_url }}" {% if page.title == currPage.title %}class="is-active"{% endif %}>{{ currPage.title }}</a></li>
       {% endfor %}
     </ul>
-  </div>
   {% endfor %}
+    </div>
 </nav>
