@@ -77,22 +77,45 @@ $( document ).ready(function() {
     $(this).toggleClass('is-expanded');
   });
   //add chevron and show children articles in the left sidebar on an active article
-  $('.children-cats').css('display', 'block');
-  $('.children-cats').prev('.parent-cat').addClass('is-expanded');
+  $('.is-active').closest('.children-cats').css('display', 'block');
+  $('.is-active').closest('.children-cats').prev('.parent-cat').addClass('is-expanded');
   //hides/shows left sidebar on mobile
   $('.nav-title').click(function() {
     $(this).next('.nav-container').slideToggle(300);
     $(this).toggleClass('is-expanded');
   });
-  linkScroll = $('.doc-nav a');
-  linkScroll.click(function(e){
-    e.preventDefault();
-    $('.doc-nav a').removeClass('is-active');
-    $(this).toggleClass('is-active');
-    $('body, html').animate({
-      scrollTop: $(this.hash).offset().top - 80
-    }, 500);
+
+
+  //add anchor tags inside single articles h2
+  $(".doc-text h2").each(function(){
+    var anchorId = $(this).attr("id");
+    $(this).addClass('header-anchor');
+  $(this).wrapInner( "<a href="+'#'+ anchorId +"></a>");
   });
+  
+  //smoothscroll
+  linkScroll = $('.doc-nav a');
+  $(linkScroll).on('click', anchorScroll);
+  headerAnchor = $('.header-anchor a');
+  $(headerAnchor).on('click', anchorScroll);
+  function anchorScroll(e) {
+  e.preventDefault();
+  $('.doc-nav a').removeClass('is-active');
+  $(this).toggleClass('is-active');
+  $('body, html').animate({
+    scrollTop: $(this.hash).offset().top - 80
+  }, 500);
+}
+if(window.location.hash) {
+  $('body, html').animate({
+    scrollTop: $(window.location.hash).offset().top - 80
+  }, 500);
+}
+
+
+
+
+
 });
 function addActiveToToc() {
   var scrollTop = $(document).scrollTop();
