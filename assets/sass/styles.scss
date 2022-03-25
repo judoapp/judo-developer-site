@@ -1,7 +1,6 @@
 ---
 ---
 @import "../css/github.css";
-
 $font-regular: 400 16px 'Poppins', sans-serif;
 $font-color: #676487;
 $accent-color-bright: #9D2BD8;
@@ -812,6 +811,46 @@ $sidebar_width: 280px;
     @extend .poppins;
     font-size:1.1em;
   }
+
+
+  h1, h2, h3, h4 {
+    &.header-anchor {
+      position: relative;
+      display: inline-block;
+      &:after {
+        background: url("../img/icons/icon-anchor.svg");
+        display: inline-block;
+        margin-left: 1rem;
+        width: 28px;
+        height: 28px;
+        background-size: 100% 100%;
+        content: "";
+        position: relative;
+        opacity: 0;
+        margin-top: -5px;
+        transition: opacity .2s ease;
+        vertical-align: middle;
+          @media screen and (max-width: 575px) {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            margin-top: 0;
+          }
+      }
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    a {
+      &:hover {
+        color: $accent-color-dark;
+      }
+    }
+  }
+
+
   .highlighter-rouge {
     margin-bottom: 3rem;
   }
@@ -1025,6 +1064,9 @@ $sidebar_width: 280px;
       margin-bottom: 1rem;
       padding-bottom: 1.5rem;
     }
+    h1 {
+      margin-bottom: 0;
+    }
   }
   .doc-text, .doc-header{
     p, img, table, iframe, h1, h2 ,h3, h4, h5, ul, ol, li,table {
@@ -1210,7 +1252,7 @@ $sidebar_width: 280px;
   .justify-around {
     width: 1170px;
     @media screen and (max-width: 1919px){
-      justify-content: space-evenly;
+      justify-content: space-around;
       padding: 0;
     }
     @media screen and (max-width: 991px){
@@ -1230,7 +1272,7 @@ $sidebar_width: 280px;
   }
   .left-sidebar {
     @media screen and (max-width: 1919px){
-      width: 250px;
+      width: 25%;
     }
     @media screen and (max-width: 991px){
       width: 100%;
