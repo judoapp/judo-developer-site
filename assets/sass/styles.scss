@@ -1088,6 +1088,9 @@ $sidebar_width: 280px;
     @media screen and (max-width: 991px){
       width: 100%;
     }
+    h1 {
+      display: none;
+    }
     ul,
     ol {
       margin-bottom: 2rem;
