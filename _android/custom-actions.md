@@ -2,7 +2,7 @@
 layout: page
 title:  "Handling Custom Actions"
 platform: Android
-step: 7
+step: 6
 pageSection: "Customization"
 ---
 

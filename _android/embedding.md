@@ -2,7 +2,7 @@
 layout: page
 title:  "Embedding a Fragment"
 platform: Android
-step: 7
+step: 5
 pageSection: "Customization"
 ---
 <section id="{{page.title | slugify }}" markdown=1>

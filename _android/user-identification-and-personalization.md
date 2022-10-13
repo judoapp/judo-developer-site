@@ -2,7 +2,7 @@
 layout: page
 title:  "User Identification and Personalization"
 platform: Android
-step: 4
+step: 2
 pageSection: "Customization"
 ---
 <section id="{{ page.title | slugify }}" markdown=1>
