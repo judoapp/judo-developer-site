@@ -2,7 +2,7 @@
 layout: page
 title:  "Embedding"
 platform: iOS
-step: 9
+step: 6
 pageSection: "Customization"
 ---
 <section id="{{page.title | slugify }}" markdown=1>

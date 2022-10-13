@@ -2,7 +2,7 @@
 layout: page
 title:  "API Authorizers"
 platform: iOS
-step: 7
+step: 4
 pageSection: "Customization"
 ---
 <section id="{{ page.title | slugify }}" markdown=1>
